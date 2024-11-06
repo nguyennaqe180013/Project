@@ -1,0 +1,329 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+    background-color: #343a40;
+    padding: 20px;
+    transition: all 0.5s ease;
+}
+
+.navbar .nav-link,
+.navbar .dropdown-menu .dropdown-item {
+    color: #ffffff; /* Màu trắng */
+    transition: color 0.3s ease; /* Hiệu ứng chuyển màu mượt */
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+    color: #ffffff; /* Màu trắng */
+    transition: color 0.3s ease; /* Hiệu ứng chuyển màu mượt */
+}
+
+.navbar-nav .nav-link {
+    position: relative;
+    display: inline-block;
+    color: white;
+    font-weight: 400; /* Bình thường là độ dày font 400 */
+    transition: color 0.3s ease; /* Hiệu ứng chuyển màu mượt */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff; /* Màu sắc khi hover */
+    font-weight: 600; /* Tăng độ dày font khi hover */
+}
+
+/* Kích thước cho dropdown menu */
+.dropdown-menu {
+    display: none;
+    /* Ẩn dropdown menu mặc định */
+    position: absolute;
+    /* Đặt vị trí tuyệt đối cho dropdown */
+    z-index: 1000;
+    /* Đảm bảo dropdown nằm trên các phần tử khác */
+    width: 100%;
+    /* Đặt chiều rộng của dropdown là 100% */
+    max-height: 300px;
+    /* Thiết lập chiều cao tối đa để có thể cuộn nếu nội dung dài */
+    overflow-y: auto;
+    /* Thêm thanh cuộn nếu nội dung vượt quá chiều cao tối đa */
+    transition: max-height 0.3s ease;
+    /* Hiệu ứng chuyển đổi chiều cao */
+    background-color: #E68A00;
+}
+
+.dropdown-menu .dropdown-item {
+    font-weight: bold;
+    color: white;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #ffcc00;
+}
+
+
+/* Áp dụng animation khi hover vào header */
+.navbar:hover {
+    background-color: #E68A00; /* Màu khi hover trên navbar */
+}
+
+/* Tăng kích thước khi dropdown mở */
+
+@media (max-width: 768px) {
+    .hero-section .row {
+        text-align: center; /* Căn giữa nội dung trên các thiết bị di động */
+    }
+   
+     .watch-section {
+        flex-direction: column; /* Xếp theo chiều dọc trên màn hình nhỏ */
+        align-items: center; /* Căn giữa */
+        text-align: center; /* Căn giữa văn bản */
+    }
+
+    .watch-section img {
+        margin-right: 0; /* Loại bỏ khoảng cách bên phải cho hình ảnh */
+        margin-bottom: 15px; /* Khoảng cách dưới cho hình ảnh */
+    }
+    
+    
+      .text-content {
+        padding: 20px; /* Thêm khoảng cách xung quanh cho văn bản */
+        text-align: center; /* Căn giữa văn bản */
+      }
+    
+      .text-content h2 {
+        font-size: 1.5rem; /* Kích thước tiêu đề lớn hơn cho mobile */
+        margin-bottom: 10px; /* Thêm khoảng cách giữa tiêu đề và văn bản */
+      }
+    
+      .text-content p {
+        font-size: 1rem; /* Kích thước chữ vừa phải cho mobile */
+        margin-bottom: 10px;
+      }
+      .feature-item{
+       text-align: center;
+      }
+    }
+    
+/* Style cho nút "Browse All Products" */
+.hero-section .btn {
+    background-color: #ff9900;
+    color: #fff;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: all 0.4s ease-in-out; /* Hiệu ứng chuyển đổi */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Tạo hiệu ứng hover cho nút */
+.hero-section .btn:hover {
+    background-color: #e68a00;
+    transform: translateY(-5px); /* Nút nổi lên khi hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Bóng đổ cho nút */
+}
+
+/* Thêm animation cho nền */
+.hero-section .btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: all 0.5s ease-in-out;
+}
+
+/* Animation khi hover vào nút */
+.hero-section .btn:hover::before {
+    left: 100%;
+}
+
+.hero-section img {
+    max-width: 100%;
+    height: auto;
+}
+.herosection {
+    background-color: #f4a261;
+    padding: 100px 0;
+    text-align: center;
+}
+.herosection img {
+    max-width: 100%;
+    height: auto;
+}
+.herosection .content {
+    text-align: left;
+}
+.herosection h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+}
+.herosection p {
+    font-size: 16px;
+    color: white;
+}
+.feature-icon {
+    font-size: 2rem;
+    color: #333;
+}
+.feature-title {
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+.feature-description {
+    color: #666;
+}
+.feature-item {
+    margin-bottom: 2rem;
+}
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+
+}
+.watch-image {
+    max-width: 100%;
+    height: auto;
+}
+.text-content {
+    color: white;
+    margin-left: 30px;
+}
+.text-content h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.text-content p {
+    font-size: 1rem;
+    margin-top: 20px;
+}
+h1 {
+    margin-top: 50px;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+.watch-section {
+    display: flex; /* Sử dụng Flexbox để căn chỉnh nội dung */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    margin: 20px 0; /* Khoảng cách giữa các section */
+    padding: 20px; /* Khoảng đệm cho các phần */
+    border: 1px solid #ddd; /* Đường viền nhẹ cho các section */
+    border-radius: 8px; /* Bo góc */
+    transition: transform 0.3s; /* Hiệu ứng chuyển đổi cho hover */
+}
+
+.watch-section:hover {
+    transform: scale(1.024); /* Phóng to một chút khi hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Thêm bóng cho cảm giác nổi bật */
+}
+
+.watch-section img {
+    max-width: 100%; /* Hình ảnh không vượt quá chiều rộng của section */
+    height: auto; /* Giữ tỷ lệ khung hình */
+    margin-right: 0px; /* Khoảng cách bên phải cho hình ảnh */
+}
+
+.text {
+    max-width: 60%; /* Giới hạn chiều rộng cho văn bản */
+}
+
+.text h2 {
+    font-size: 24px; /* Kích thước tiêu đề */
+    margin-bottom: 10px; /* Khoảng cách dưới tiêu đề */
+}
+
+.text p {
+    font-size: 16px; /* Kích thước văn bản */
+    line-height: 1.5; /* Khoảng cách dòng */
+}
+
+
+.subscribe-section {
+    background: url('../images/watch6.jpeg') no-repeat center center;
+    background-size: cover;
+    padding: 100px 0;
+    text-align: center;
+    color: white;
+}
+.subscribe-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+.subscribe-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+.subscribe-section .form-control {
+    display: inline-block;
+    width: auto;
+    margin-right: 10px;
+}
+.subscribe-section .btn {
+    background-color: #f39c12;
+    border: none;
+    padding: 10px 20px;
+}
+.review-section {
+    padding: 50px 0;
+    text-align: center;
+}
+.review-section h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+.review-item {
+    margin-bottom: 30px;
+}
+.review-item .quote {
+    color: #f39c12;
+    font-size: 2rem;
+}
+.review-item p {
+    font-size: 1rem;
+    margin: 20px 0;
+}
+.review-item .author {
+    font-weight: bold;
+}
+.review-item .position {
+    color: gray;
+}
+.footer {
+    background-color: #343a40;
+    padding: 20px;
+    text-align: center;
+    color: white;
+  }
+/* Đặt màu chữ mặc định là trắng cho các liên kết trong footer */
+.footer a {
+    color: white;
+    text-decoration: none; /* Bỏ gạch chân cho các liên kết */
+  }
+  
+  /* Khi hover, màu chữ sẽ chuyển thành màu vàng */
+  .footer a:hover {
+    color: yellow;
+  }
+  
+  /* Thêm màu nền đen cho footer để tạo sự tương phản */
+  .footer p {
+    margin-top: 15px;
+    color: gray;
+  }
+
+.subscribe-image {
+    max-width: 100%; /* Ensure the image is responsive */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px; /* Space between the image and the heading */
+}

@@ -1,0 +1,131 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+    background-color: #343a40;
+    padding: 20px;
+    transition: all 0.5s ease;
+}
+
+.navbar .nav-link,
+.navbar .dropdown-menu .dropdown-item {
+    color: #ffffff; /* Màu trắng */
+    transition: color 0.3s ease; /* Hiệu ứng chuyển màu mượt */
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+    color: #ffffff; /* Màu trắng */
+    transition: color 0.3s ease; /* Hiệu ứng chuyển màu mượt */
+}
+
+.navbar-nav .nav-link {
+    position: relative;
+    display: inline-block;
+    color: white;
+    font-weight: 400; /* Bình thường là độ dày font 400 */
+    transition: color 0.3s ease; /* Hiệu ứng chuyển màu mượt */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff; /* Màu sắc khi hover */
+    font-weight: 600; /* Tăng độ dày font khi hover */
+}
+
+/* Kích thước cho dropdown menu */
+.dropdown-menu {
+    display: none;
+    /* Ẩn dropdown menu mặc định */
+    position: absolute;
+    /* Đặt vị trí tuyệt đối cho dropdown */
+    z-index: 1000;
+    /* Đảm bảo dropdown nằm trên các phần tử khác */
+    width: 100%;
+    /* Đặt chiều rộng của dropdown là 100% */
+    max-height: 300px;
+    /* Thiết lập chiều cao tối đa để có thể cuộn nếu nội dung dài */
+    overflow-y: auto;
+    /* Thêm thanh cuộn nếu nội dung vượt quá chiều cao tối đa */
+    transition: max-height 0.3s ease;
+    /* Hiệu ứng chuyển đổi chiều cao */
+    background-color: #E68A00;
+}
+
+.dropdown-menu .dropdown-item {
+    font-weight: bold;
+    color: white;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #ffcc00;
+}
+
+
+/* Áp dụng animation khi hover vào header */
+.navbar:hover {
+    background-color: #E68A00; /* Màu khi hover trên navbar */
+}
+
+.content-section {
+    padding: 60px 0;
+}
+.content-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.content-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.content-section .col-md-6 {
+    margin-bottom: 24px; /* Khoảng cách giữa các cột trong cùng 1 hàng */
+  }
+.btn-read-more {
+    background-color: #f0a500;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(240, 165, 0, 0.3);
+    text-decoration: none; /* Loại bỏ gạch chân */
+}
+.btn-read-more:hover {
+    background-color: #e59400;
+}
+.image-container {
+    text-align: center;
+}
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+.footer {
+    background-color: #343a40;
+    padding: 20px;
+    text-align: center;
+    color: white;
+  }
+/* Đặt màu chữ mặc định là trắng cho các liên kết trong footer */
+.footer a {
+    color: white;
+    text-decoration: none; /* Bỏ gạch chân cho các liên kết */
+  }
+  
+  /* Khi hover, màu chữ sẽ chuyển thành màu vàng */
+  .footer a:hover {
+    color: yellow;
+  }
+  
+  /* Thêm màu nền đen cho footer để tạo sự tương phản */
+  .footer p {
+    margin-top: 15px;
+    color: gray;
+  }
